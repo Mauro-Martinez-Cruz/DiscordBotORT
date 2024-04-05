@@ -23,6 +23,8 @@ public class get extends ListenerAdapter {
             if(e.getOption("command").getAsString().equals("getORT"))
                 e.replyEmbeds(tools.getORT()).queue();
 
+            System.out.println(e.getUser());
+
         }
     }
 

@@ -16,6 +16,7 @@ public class Tools extends ListenerAdapter {
     public static final String JUEVES = "Jueves";
     public static final String VIERNES = "Viernes";
 
+    // getWeek
     public MessageEmbed getWeek(){
         EmbedBuilder embedBuilder = new EmbedBuilder()
                 .setTitle("Semana")
@@ -31,6 +32,7 @@ public class Tools extends ListenerAdapter {
         return embedBuilder.build();
     }
 
+    // getORT
     public MessageEmbed getORT(){
         EmbedBuilder embedBuilder = new EmbedBuilder()
                 .setTitle("Facultad de Ingenieria")
