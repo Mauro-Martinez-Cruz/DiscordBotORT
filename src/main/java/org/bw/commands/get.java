@@ -16,14 +16,17 @@ public class get extends ListenerAdapter {
     public void onSlashCommandInteraction(SlashCommandInteractionEvent e){
         if(e.getName().equals("get")){
 
-            // getWeek
-            if(e.getOption("command").getAsString().equals("getWeek"))
-                e.replyEmbeds(tools.getWeek()).queue();
-            // getORT
-            if(e.getOption("command").getAsString().equals("getORT"))
-                e.replyEmbeds(tools.getORT()).queue();
+            // getPrograms
+            if(e.getOption("command").getAsString().equals("getPrograms")) {
+                e.replyEmbeds(tools.getPrograms()).queue();
+                System.out.println("["+e.getUser().getAsMention()+"]["+e.getUser().getAsTag()+"]["+e.getTextChannel().getName()+"]: /get getProgrmas");
+            }
+            // getVariables
+            if(e.getOption("command").getAsString().equals("getVariables")){
+                e.replyEmbeds(tools.getVariables()).queue();
+                System.out.println("["+e.getUser().getAsMention()+"]["+e.getUser().getAsTag()+"]["+e.getTextChannel().getName()+"]: /get getVariables");
+            }
 
-            System.out.println(e.getUser());
 
         }
     }

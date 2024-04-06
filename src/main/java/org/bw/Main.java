@@ -1,5 +1,9 @@
 package org.bw;
 
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigBeanFactory;
+import com.typesafe.config.ConfigFactory;
+import com.typesafe.config.parser.ConfigDocumentFactory;
 import net.dv8tion.jda.api.*;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
@@ -14,9 +18,10 @@ import static net.dv8tion.jda.api.interactions.commands.OptionType.*;
 public class Main {
     public static JDA sharddMan;
     public static JDABuilder builder;
+    private static final String TOKEN = "MTIyNTUyMTQ3ODU0ODcxNzYyOQ.GNNtAC.i8k4aiYpKQ0g2SKWe9cca8a9z36ZVozh-ZeBrA";
 
     public static void main(String[] args) throws LoginException, InterruptedException {
-        builder = JDABuilder.createDefault("MTA2MjM2NzM2ODU1NjMzMTAxOA.GgNwkU.eMiwzv2iy2CgFh1kKsWwe6L_kSXiay458sHCAM")
+        builder = JDABuilder.createDefault(TOKEN) // JavaBot
                 .addEventListeners(new get());
 
 
@@ -28,8 +33,8 @@ public class Main {
 
         sleep(5000);
 
-        /* COMANDO GET
-        sharddMan.getGuildById("1225506308439015424").upsertCommand("get","Obtener datos")
+        /*// COMANDO GET
+        sharddMan.getGuildById("1225851698359042068").upsertCommand("get","Obtener datos")
                 .addOption(OptionType.STRING, "command", "Dato a Obtener", true).queue();
         */
     }

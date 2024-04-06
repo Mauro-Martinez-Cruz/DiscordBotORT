@@ -9,35 +9,24 @@ import java.awt.*;
 
 public class Tools extends ListenerAdapter {
 
-    // VARIABLES ESTATICAS
-    public static final String LUNES = "Lunes";
-    public static final String MARTES = "Martes";
-    public static final String MIERCOLES = "Miercoles";
-    public static final String JUEVES = "Jueves";
-    public static final String VIERNES = "Viernes";
+    // CALLs
+    ContentMessage contentMessage = new ContentMessage();
 
-    // getWeek
-    public MessageEmbed getWeek(){
+    // getPrograms
+    public MessageEmbed getPrograms(){
         EmbedBuilder embedBuilder = new EmbedBuilder()
-                .setTitle("Semana")
-                .setDescription(
-                        "Dias de la semana\n" +
-                                LUNES+"\n"+
-                                MARTES+"\n"+
-                                MIERCOLES+"\n"+
-                                JUEVES+"\n"+
-                                VIERNES+"\n"
-                )
-                .setColor(new Color(167,5,5));
+                .setTitle("IntelliJ IDEA & JDK")
+                .setDescription(contentMessage.MSG_GET_PROGRAMS)
+                .setColor(new Color(227, 79, 0));
         return embedBuilder.build();
     }
 
-    // getORT
-    public MessageEmbed getORT(){
+    // getVariables
+    public MessageEmbed getVariables(){
         EmbedBuilder embedBuilder = new EmbedBuilder()
-                .setTitle("Facultad de Ingenieria")
-                .setImage("/img/ort.jpg")
-                .setColor(new Color(167,5,5));
+                .setTitle("Tipos de Variables")
+                .setDescription(contentMessage.MSG_GET_VARIABLE)
+                .setColor(new Color(227, 79, 0));
         return embedBuilder.build();
     }
 
