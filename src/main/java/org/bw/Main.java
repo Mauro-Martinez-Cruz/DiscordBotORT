@@ -37,6 +37,11 @@ public class Main {
         sharddMan.getGuildById("1225851698359042068").upsertCommand("get","Obtener datos")
                 .addOption(OptionType.STRING, "command", "Dato a Obtener", true).queue();
         */
+
+        // COMANDO HELP
+        //sharddMan.getGuildById("1225851698359042068").upsertCommand("help","Commandos del JavaBot").queue();
+
+
     }
 
 }
