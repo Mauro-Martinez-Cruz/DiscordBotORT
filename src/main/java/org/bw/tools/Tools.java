@@ -2,8 +2,8 @@ package org.bw.tools;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
-import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.bw.Model.Usuario;
 
 import java.awt.*;
 
@@ -40,20 +40,19 @@ public class Tools extends ListenerAdapter {
     }
 
     // getVariables
-    public MessageEmbed getUser(SlashCommandInteractionEvent e){
+    public MessageEmbed getUser(Usuario u){
         EmbedBuilder embedBuilder = new EmbedBuilder()
-                .setTitle(e.getMember().getRoles().get(0).getName()+" "+ e.getMember().getNickname())
-                .setImage(e.getMember().getEffectiveAvatarUrl())
+                .setTitle("Usuario "+ u.getNick())
                 .setDescription(
-                    "------------------------------------\n"+
-                    "**Imagen:** "+e.getMember().getEffectiveAvatarUrl()+"\n"+
-                    "**Rol:** "+e.getMember().getRoles().get(0).getName()+"\n"+
-                    "**Nick:** "+e.getMember().getNickname()+"\n"+
-                    "**Mencion:** "+e.getMember().getAsMention()+"\n"+
-                    "**ID:** "+e.getMember().getId()+"\n"+
-                    "**Tag:** "+e.getUser().getAsTag()+"\n"+
-                    "------------------------------------"
+                    ContentMessage.TXT_TOOLS.RECTANGULOS +"\n\n"+
+                    "**Mencion:** "+ u.getMencion() +"\n"+
+                    "**Tag:** "+ u.getTag() +"\n"+
+                    "**Rol:** "+ u.getRol() +"\n"+
+                    "**Nivel:** "+ u.getNivel() +"\n"+
+                    "**Tareas entregadas:** "+ u.getTareasEntregadas() +"\n\n"+
+                    ContentMessage.TXT_TOOLS.RECTANGULOS
                 )
+                .setImage(u.getImagenUrl())
                 .setColor(new Color(227, 79, 0));
         return embedBuilder.build();
     }

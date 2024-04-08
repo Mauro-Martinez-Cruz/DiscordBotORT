@@ -41,6 +41,9 @@ public class Main {
         // COMANDO HELP
         //sharddMan.getGuildById("1225851698359042068").upsertCommand("help","Commandos del JavaBot").queue();
 
+        // COMANDO USER
+        //sharddMan.getGuildById("1225851698359042068").upsertCommand("user","Perfil de usuario").queue();
+
 
     }
 

@@ -1,5 +1,7 @@
 package org.bw.tools;
 
+import java.awt.*;
+
 public class ContentMessage {
     // VARIABLES PRIVADAS
     public static final String JDK = "https://www.oracle.com/java/technologies/downloads/";
@@ -43,6 +45,17 @@ public class ContentMessage {
 
     public static class TITLE{
         public static final String COMMANDS_HELP = "**𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾𝗅 𝖩𝖺𝗏𝖺𝖡𝗈𝗍**";
+    }
+
+    public static class TXT_TOOLS{
+        public static final String RECTANGULO = "█";
+        public static final String RECTANGULOS = "███████████████████";
+    }
+
+    public static class PAINT{
+        public static void setRed(Graphics g){
+            g.setColor(Color.RED);
+        }
     }
 
 
