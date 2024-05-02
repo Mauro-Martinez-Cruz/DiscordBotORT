@@ -18,7 +18,7 @@ import static net.dv8tion.jda.api.interactions.commands.OptionType.*;
 public class Main {
     public static JDA sharddMan;
     public static JDABuilder builder;
-    private static final String TOKEN = "MTIyNTUyMTQ3ODU0ODcxNzYyOQ.GNNtAC.i8k4aiYpKQ0g2SKWe9cca8a9z36ZVozh-ZeBrA";
+    private static final String TOKEN = "YOU TOKEN";
 
     public static void main(String[] args) throws LoginException, InterruptedException {
         builder = JDABuilder.createDefault(TOKEN) // JavaBot
